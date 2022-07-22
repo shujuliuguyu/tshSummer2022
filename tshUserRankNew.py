@@ -11,8 +11,13 @@ dList = []
 for i in range(0, 10):
     dList.append(rList[i].json())
 
+sum=0
+
 for i in range(0, 10):
     for j in range(0, 20):
         print(str(dList[i]['data']['list'][j]['rank'])+" " +
               dList[i]['data']['list'][j]['uname']+" " +
               str(dList[i]['data']['list'][j]['score']))
+        sum+=dList[i]['data']['list'][j]['score']
+
+print("Top200贡献总计："+str(sum))
