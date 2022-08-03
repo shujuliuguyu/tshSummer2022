@@ -2,7 +2,7 @@ import openpyxl
 import requests
 xlsx = openpyxl.load_workbook(
     r'C:\Users\acer\Desktop\tshXoxZhibijianInfo.xlsx')
-sheet = xlsx.active
+sheet = xlsx.worksheets[0]
 number = sheet.max_row
 url1 = "https://api.live.bilibili.com/xlive/app-room/v2/guardTab/topList?roomid="
 url2 = "&page="
